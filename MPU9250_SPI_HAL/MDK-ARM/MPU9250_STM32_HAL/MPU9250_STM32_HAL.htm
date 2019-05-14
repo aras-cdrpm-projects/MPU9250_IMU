@@ -3,7 +3,7 @@
 <title>Static Call Graph - [MPU9250_STM32_HAL\MPU9250_STM32_HAL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image MPU9250_STM32_HAL\MPU9250_STM32_HAL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat May 26 00:59:34 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue May 14 18:30:07 2019
 <BR><P>
 <H3>Maximum Stack Usage =        336 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -291,7 +291,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[54]"></a>CDC_Transmit_FS</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, usbd_cdc_if.o(i.CDC_Transmit_FS))
+<P><STRONG><a name="[54]"></a>CDC_Transmit_FS</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usbd_cdc_if.o(i.CDC_Transmit_FS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = CDC_Transmit_FS &rArr; USBD_CDC_TransmitPacket &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; USB_EPStartXfer &rArr; USB_WritePMA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_TransmitPacket
@@ -315,10 +315,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuBegin
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeRegister
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeRegister
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readAK8963Registers
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuBegin
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[59]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback))
@@ -341,10 +341,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9d]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
+<BR><BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250ReadReg
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
 <P><STRONG><a name="[58]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal.o(i.HAL_GetTick))
@@ -630,9 +630,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250ReadReg
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 </UL>
 
 <P><STRONG><a name="[93]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, stm32f1xx_hal_msp.o(i.HAL_SPI_MspInit))
@@ -659,9 +659,9 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250ReadReg
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[96]"></a>HAL_SPI_TransmitReceive</STRONG> (Thumb, 472 bytes, Stack size 40 bytes, stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive))
@@ -761,7 +761,7 @@ Global Symbols
 <P><STRONG><a name="[14]"></a>USBD_CDC_GetDeviceQualifierDescriptor</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_GetDeviceQualifierDescriptor))
 <BR>[Address Reference Count : 1]<UL><LI> usbd_cdc.o(.data)
 </UL>
-<P><STRONG><a name="[53]"></a>USBD_CDC_ReceivePacket</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, usbd_cdc.o(i.USBD_CDC_ReceivePacket))
+<P><STRONG><a name="[53]"></a>USBD_CDC_ReceivePacket</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, usbd_cdc.o(i.USBD_CDC_ReceivePacket))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = USBD_CDC_ReceivePacket &rArr; USBD_LL_PrepareReceive &rArr; HAL_PCD_EP_Receive &rArr; USB_EPStartXfer &rArr; USB_WritePMA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_PrepareReceive
@@ -773,17 +773,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USB_DEVICE_Init
 </UL>
 
-<P><STRONG><a name="[52]"></a>USBD_CDC_SetRxBuffer</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_SetRxBuffer))
+<P><STRONG><a name="[52]"></a>USBD_CDC_SetRxBuffer</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_SetRxBuffer))
 <BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Receive_FS
 <LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Init_FS
 </UL>
 
-<P><STRONG><a name="[51]"></a>USBD_CDC_SetTxBuffer</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_SetTxBuffer))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Transmit_FS
-<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Init_FS
+<P><STRONG><a name="[51]"></a>USBD_CDC_SetTxBuffer</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_SetTxBuffer))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Init_FS
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Transmit_FS
 </UL>
 
-<P><STRONG><a name="[55]"></a>USBD_CDC_TransmitPacket</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, usbd_cdc.o(i.USBD_CDC_TransmitPacket))
+<P><STRONG><a name="[55]"></a>USBD_CDC_TransmitPacket</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, usbd_cdc.o(i.USBD_CDC_TransmitPacket))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = USBD_CDC_TransmitPacket &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; USB_EPStartXfer &rArr; USB_WritePMA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_Transmit
@@ -1344,9 +1344,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuBegin
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeAK8963Register
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeAK8963Register
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;whoAmIAK8963
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuBegin
 </UL>
 
 <P><STRONG><a name="[d8]"></a>readRegisters</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mpu9250_spi.o(i.readRegisters))
@@ -1354,9 +1354,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250ReadReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuReadSensor
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeRegister
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeRegister
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;whoAmI
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuReadSensor
 </UL>
 
 <P><STRONG><a name="[d5]"></a>whoAmI</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mpu9250_spi.o(i.whoAmI))
@@ -1391,10 +1391,10 @@ Global Symbols
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readRegisters
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu9250WriteReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuBegin
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enableDataReadyInterrupt
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeAK8963Register
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeAK8963Register
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readAK8963Registers
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpuBegin
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enableDataReadyInterrupt
 </UL>
 <P>
 <H3>
@@ -1499,10 +1499,10 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_StdDevReq
 </UL>
 
-<P><STRONG><a name="[f]"></a>USBD_CDC_DataIn</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_DataIn))
+<P><STRONG><a name="[f]"></a>USBD_CDC_DataIn</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_DataIn))
 <BR>[Address Reference Count : 1]<UL><LI> usbd_cdc.o(.data)
 </UL>
-<P><STRONG><a name="[10]"></a>USBD_CDC_DataOut</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, usbd_cdc.o(i.USBD_CDC_DataOut))
+<P><STRONG><a name="[10]"></a>USBD_CDC_DataOut</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, usbd_cdc.o(i.USBD_CDC_DataOut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USBD_CDC_DataOut
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_GetRxDataSize
@@ -1531,8 +1531,8 @@ Local Symbols
 <P><STRONG><a name="[13]"></a>USBD_CDC_GetOtherSpeedCfgDesc</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, usbd_cdc.o(i.USBD_CDC_GetOtherSpeedCfgDesc))
 <BR>[Address Reference Count : 1]<UL><LI> usbd_cdc.o(.data)
 </UL>
-<P><STRONG><a name="[b]"></a>USBD_CDC_Init</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, usbd_cdc.o(i.USBD_CDC_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = USBD_CDC_Init &rArr; USBD_LL_OpenEP &rArr; HAL_PCD_EP_Open &rArr; USB_ActivateEndpoint
+<P><STRONG><a name="[b]"></a>USBD_CDC_Init</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, usbd_cdc.o(i.USBD_CDC_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = USBD_CDC_Init &rArr; USBD_LL_OpenEP &rArr; HAL_PCD_EP_Open &rArr; USB_ActivateEndpoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_static_malloc
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_PrepareReceive
